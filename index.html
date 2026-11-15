@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>James M. Barney · Books</title>
+<meta name="description" content="Novels by James M. Barney: Decoration Day and Against Perpetuity.">
+<meta property="og:title" content="James M. Barney · Books">
+<meta property="og:description" content="Novels by James M. Barney: Decoration Day and Against Perpetuity.">
+<meta property="og:image" content="decoration-day/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f3ec; --ink: #1d1c1a; --muted: #6b665d; --rule: #d9d3c6; --accent: #7a3b2e;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #161513; --ink: #ece7dc; --muted: #9b958a; --rule: #34312c; --accent: #d89a84; }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "Newsreader", Georgia, serif; font-size: 19px; line-height: 1.55;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 72px 20px 56px; }
+  header h1 { font-weight: 400; font-size: clamp(2.4rem, 7vw, 3.6rem); letter-spacing: -0.01em; margin: 0; line-height: 1.05; }
+  header p { color: var(--muted); margin: 14px 0 0; max-width: 34em; }
+  h2 { font-size: 0.8rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.16em; color: var(--muted); margin: 64px 0 20px; padding-bottom: 10px; border-bottom: 1px solid var(--rule); }
+  .books { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 40px 36px; }
+  .book { text-decoration: none; color: inherit; display: block; }
+  .book .cover { aspect-ratio: 2 / 3; width: 100%; border-radius: 2px; box-shadow: 0 1px 2px rgba(0,0,0,.12), 0 12px 30px -12px rgba(0,0,0,.35); overflow: hidden; transition: transform .25s ease; }
+  .book:hover .cover, .book:focus-visible .cover { transform: translateY(-4px); }
+  .book img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .book h3 { font-weight: 500; font-size: 1.35rem; margin: 18px 0 2px; }
+  .book .kind { color: var(--muted); font-style: italic; margin: 0; }
+  .book .status { font-size: 0.85rem; color: var(--accent); margin: 6px 0 0; }
+  /* typographic cover for Against Perpetuity */
+  .ap-cover { background: radial-gradient(120% 80% at 50% 12%, #18233a 0%, #070a12 60%); color: #e8e2cf; display: flex; flex-direction: column; justify-content: space-between; padding: 12% 10%; font-family: "Newsreader", serif; position: relative; }
+  .ap-cover::before { content: ""; position: absolute; left: 50%; top: 18%; bottom: 18%; width: 1px; background: linear-gradient(#e8e2cf00, #c9a45c, #e8e2cf00); opacity: .6; }
+  .ap-cover .t { font-size: clamp(1.5rem, 4.5vw, 2rem); line-height: 1.05; text-transform: uppercase; letter-spacing: .12em; text-align: center; position: relative; }
+  .ap-cover .a { font-size: .8rem; letter-spacing: .3em; text-transform: uppercase; text-align: center; color: #c9a45c; position: relative; }
+  .about { max-width: 36em; }
+  .about p { margin: 0 0 1em; }
+  .wip { display: flex; gap: 14px; align-items: baseline; }
+  .wip strong { font-weight: 500; }
+  footer { margin-top: 72px; padding-top: 20px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.9rem; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  footer a { color: inherit; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>James M. Barney</h1>
+    <p>Novels about places, time, and the things people try to own.</p>
+  </header>
+
+  <h2>Books</h2>
+  <div class="books">
+    <a class="book" href="decoration-day/index.html">
+      <div class="cover"><img src="assets/decoration-day-cover-sm.jpg" alt="Cover of Decoration Day: a stone tunnel mouth at the end of a cracked mountain road under a storm sky" loading="lazy"></div>
+      <h3>Decoration Day</h3>
+      <p class="kind">Literary horror</p>
+      <p class="status">Out now in paperback and Kindle</p>
+    </a>
+    <a class="book" href="against-perpetuity/index.html">
+      <div class="cover ap-cover" aria-label="Against Perpetuity cover">
+        <div class="t">Against<br>Perpetuity</div>
+        <div class="a">James M. Barney</div>
+      </div>
+      <h3>Against Perpetuity</h3>
+      <p class="kind">Hard science fiction</p>
+      <p class="status">Coming soon</p>
+    </a>
+  </div>
+
+  <h2>In progress</h2>
+  <div class="wip">
+    <p><strong>The Window</strong> · a short story told from inside a language model, built to be read here on the web.</p>
+  </div>
+
+  <h2>About</h2>
+  <div class="about">
+    <p>James M. Barney studied physics at James Madison University, where he helped build particle detectors for labs in Virginia and Switzerland. He has spent his career building software, and he writes fiction the way he builds it. He lives in Charlotte, North Carolina.</p>
+  </div>
+
+  <footer>
+    <span>© 2026 James M. Barney</span>
+  </footer>
+</div>
+</body>
+</html>

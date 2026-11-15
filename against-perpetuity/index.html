@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Against Perpetuity · James M. Barney</title>
+<meta name="description" content="Against Perpetuity, a hard science fiction novel by James M. Barney about time dilation as a financial instrument.">
+<meta property="og:title" content="Against Perpetuity · a novel by James M. Barney">
+<meta property="og:description" content="One year aboard. Forty years at port.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Serif:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+  :root { color-scheme: dark;
+    --bg: #070a12; --bg2: #0d1322; --ink: #e8e2cf; --muted: #8a90a2; --gold: #c9a45c; --rule: #1f2738; --green: #7fc29b; --red: #e07a6b;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font-family: "IBM Plex Serif", Georgia, serif; font-size: 19px; line-height: 1.6; }
+  .mono { font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace; }
+  a { color: var(--gold); }
+  .stars { position: fixed; inset: 0; pointer-events: none; z-index: 0; opacity: .55;
+    background-image:
+      radial-gradient(1px 1px at 12% 22%, #fff8 50%, transparent 51%),
+      radial-gradient(1px 1px at 68% 14%, #fff6 50%, transparent 51%),
+      radial-gradient(1px 1px at 82% 62%, #fff7 50%, transparent 51%),
+      radial-gradient(1px 1px at 34% 78%, #fff5 50%, transparent 51%),
+      radial-gradient(1px 1px at 52% 44%, #fff4 50%, transparent 51%),
+      radial-gradient(1px 1px at 91% 88%, #fff6 50%, transparent 51%),
+      radial-gradient(1px 1px at 6% 64%, #fff5 50%, transparent 51%);
+  }
+  .page { position: relative; z-index: 1; }
+  .top { max-width: 1040px; margin: 0 auto; padding: 22px 20px 0; font-family: "IBM Plex Mono", monospace; font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; }
+  .top a { color: var(--muted); text-decoration: none; }
+  .top a:hover { color: var(--ink); }
+  .hero { max-width: 1040px; margin: 0 auto; padding: 56px 20px 64px; display: grid; grid-template-columns: minmax(220px, 320px) 1fr; gap: 56px; align-items: center; }
+  .cover { aspect-ratio: 2/3; background: radial-gradient(120% 80% at 50% 12%, #18233a 0%, #070a12 62%); border: 1px solid #ffffff10; box-shadow: 0 30px 60px -20px #000, 0 0 80px -30px #c9a45c55; display: flex; flex-direction: column; justify-content: space-between; padding: 14% 10%; position: relative; }
+  .cover::before { content: ""; position: absolute; left: 50%; top: 22%; bottom: 20%; width: 1px; background: linear-gradient(#0000, var(--gold), #0000); }
+  .cover .t { font-size: clamp(1.6rem, 4vw, 2.2rem); line-height: 1.05; text-transform: uppercase; letter-spacing: .14em; text-align: center; position: relative; }
+  .cover .a { font-family: "IBM Plex Mono", monospace; font-size: .72rem; letter-spacing: .32em; text-transform: uppercase; text-align: center; color: var(--gold); position: relative; }
+  .eyebrow { font-family: "IBM Plex Mono", monospace; color: var(--gold); font-size: .8rem; letter-spacing: .2em; text-transform: uppercase; margin: 0 0 18px; }
+  h1 { font-weight: 400; font-size: clamp(2.4rem, 6.5vw, 4rem); line-height: 1; letter-spacing: .02em; margin: 0; }
+  .tag { font-size: 1.4rem; line-height: 1.35; margin: 28px 0 0; color: var(--ink); }
+  .tag span { color: var(--muted); }
+  .status { margin-top: 28px; display: inline-flex; align-items: center; gap: 10px; font-family: "IBM Plex Mono", monospace; font-size: .85rem; letter-spacing: .08em; border: 1px solid var(--rule); padding: 10px 16px; color: var(--muted); }
+  .status i { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 10px var(--gold); animation: pulse 2.4s ease-in-out infinite; }
+  @keyframes pulse { 50% { opacity: .35; } }
+  @media (prefers-reduced-motion: reduce) { .status i { animation: none; } }
+  main { max-width: 1040px; margin: 0 auto; padding: 0 20px 72px; }
+  section { display: grid; grid-template-columns: 220px 1fr; gap: 40px; padding: 48px 0; border-top: 1px solid var(--rule); }
+  section > h2 { font-family: "IBM Plex Mono", monospace; font-weight: 400; font-size: .78rem; text-transform: uppercase; letter-spacing: .2em; color: var(--muted); margin: 6px 0 0; }
+  .prose { max-width: 34em; }
+  .prose p { margin: 0 0 1.1em; }
+  /* ledger */
+  .ledger { background: var(--bg2); border: 1px solid var(--rule); padding: 24px; max-width: 36em; font-family: "IBM Plex Mono", monospace; font-size: .9rem; }
+  .ledger label { display: flex; justify-content: space-between; color: var(--muted); margin-bottom: 8px; }
+  .ledger input[type=range] { width: 100%; accent-color: var(--gold); margin: 0 0 20px; }
+  .ledger .row { display: flex; justify-content: space-between; padding: 10px 0; border-top: 1px dashed var(--rule); }
+  .ledger .row b { font-weight: 500; }
+  .ledger .big b { color: var(--green); font-size: 1.15rem; }
+  .ledger .fine { color: var(--muted); font-size: .75rem; margin: 14px 0 0; line-height: 1.5; }
+  footer { max-width: 1040px; margin: 0 auto; padding: 24px 20px 48px; color: var(--muted); font-size: .85rem; border-top: 1px solid var(--rule); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; font-family: "IBM Plex Mono", monospace; }
+  footer a { color: inherit; }
+  @media (max-width: 760px) {
+    .hero { grid-template-columns: 1fr; gap: 32px; padding-top: 36px; }
+    .cover { max-width: 240px; }
+    section { grid-template-columns: 1fr; gap: 16px; padding: 36px 0; }
+  }
+</style>
+</head>
+<body>
+<div class="stars" aria-hidden="true"></div>
+<div class="page">
+  <div class="top"><a href="../index.html">← James M. Barney</a></div>
+
+  <div class="hero">
+    <div class="cover" role="img" aria-label="Against Perpetuity cover">
+      <div class="t">Against<br>Perpetuity</div>
+      <div class="a">James M. Barney</div>
+    </div>
+    <div>
+      <p class="eyebrow">A novel · hard science fiction</p>
+      <h1>Against Perpetuity</h1>
+      <p class="tag">One year aboard. <span>Forty years at port.</span></p>
+      <div class="status"><i></i> Coming soon</div>
+    </div>
+  </div>
+
+  <main>
+    <section>
+      <h2>The book</h2>
+      <div class="prose">
+        <p>Meridian Corporation sells the cleanest deal in the colonies. Deposit your savings at the port of departure, board a relativistic liner, and let time dilation do the rest. What feels like one year aboard is forty at the destination, and you step off to collect four decades of compound interest on money you put away last year.</p>
+        <p>The passage contracts have no termination clause. That is not an accident. It is the business model.</p>
+        <p><i>Against Perpetuity</i> follows a ship that hears a firehose of news from the port ahead and nothing at all from the port behind, and the crew and passengers who live inside that gap. It is a book about time and money, and about what happens when someone convinces you they are separate things.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>The ledger</h2>
+      <div class="ledger" id="ledger">
+        <label for="yrs"><span>Years aboard</span><span id="yrsv">1</span></label>
+        <input id="yrs" type="range" min="1" max="6" step="1" value="1">
+        <div class="row"><span>Deposit at departure</span><b>$10,000</b></div>
+        <div class="row"><span>Years elapsed at port</span><b id="port">40</b></div>
+        <div class="row big"><span>Balance on arrival</span><b id="bal">$70,400</b></div>
+        <p class="fine">At 5% a year, compounded annually, before fees. Fees are assessed aboard. The balance is held at port. The two are not reconciled until the ship docks.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Where to buy</h2>
+      <div class="prose">
+        <p>Not in stores yet. Check back here for links when it is.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 James M. Barney</span>
+    <a href="../index.html">More books</a>
+  </footer>
+</div>
+<script>
+  (function () {
+    var r = document.getElementById('yrs');
+    var fmt = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+    function upd() {
+      var y = +r.value, port = y * 40;
+      document.getElementById('yrsv').textContent = y;
+      document.getElementById('port').textContent = port;
+      document.getElementById('bal').textContent = fmt.format(10000 * Math.pow(1.05, port));
+    }
+    r.addEventListener('input', upd); upd();
+  })();
+</script>
+</body>
+</html>
