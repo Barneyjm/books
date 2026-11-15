@@ -36,11 +36,6 @@
   .book h3 { font-weight: 500; font-size: 1.35rem; margin: 18px 0 2px; }
   .book .kind { color: var(--muted); font-style: italic; margin: 0; }
   .book .status { font-size: 0.85rem; color: var(--accent); margin: 6px 0 0; }
-  /* typographic cover for Against Perpetuity */
-  .ap-cover { background: radial-gradient(120% 80% at 50% 12%, #18233a 0%, #070a12 60%); color: #e8e2cf; display: flex; flex-direction: column; justify-content: space-between; padding: 12% 10%; font-family: "Newsreader", serif; position: relative; }
-  .ap-cover::before { content: ""; position: absolute; left: 50%; top: 18%; bottom: 18%; width: 1px; background: linear-gradient(#e8e2cf00, #c9a45c, #e8e2cf00); opacity: .6; }
-  .ap-cover .t { font-size: clamp(1.5rem, 4.5vw, 2rem); line-height: 1.05; text-transform: uppercase; letter-spacing: .12em; text-align: center; position: relative; }
-  .ap-cover .a { font-size: .8rem; letter-spacing: .3em; text-transform: uppercase; text-align: center; color: #c9a45c; position: relative; }
   .about { max-width: 36em; }
   .about p { margin: 0 0 1em; }
   .wip { display: flex; gap: 14px; align-items: baseline; }
@@ -66,10 +61,7 @@
       <p class="status">Out now in paperback and Kindle</p>
     </a>
     <a class="book" href="against-perpetuity/index.html">
-      <div class="cover ap-cover" aria-label="Against Perpetuity cover">
-        <div class="t">Against<br>Perpetuity</div>
-        <div class="a">James M. Barney</div>
-      </div>
+      <div class="cover"><img src="assets/against-perpetuity-cover-sm.jpg" alt="Cover of Against Perpetuity: a long gold-plated relativistic cruise liner crossing a starfield inside a copper Art Deco frame" loading="lazy"></div>
       <h3>Against Perpetuity</h3>
       <p class="kind">Hard science fiction</p>
       <p class="status">Coming soon</p>
